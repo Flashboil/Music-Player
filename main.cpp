@@ -1,9 +1,12 @@
-//
-// Created by user on 1/29/2026.
-//
 #include <iostream>
+#include <filesystem>
+#include "Tracklist.h"
 
-int main() {
-    std::cout << "CLion is working\n";
+namespace fs = std::filesystem;
+using namespace std;
+
+int main()
+{
+
     return 0;
 }
