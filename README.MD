@@ -36,7 +36,7 @@ Filesystem library is used to work with directories and files.
 # AI Disclosure
 
 I used ChatGPT as a learning tool throughout this project's development. I used it particularly to help understand the 
-documentation for filesystem and how to use certain functions of the library.
+documentation for filesystem and how to use certain functions of the library. I also used it to help understand debugging messages.
 
 # Future Work
 
