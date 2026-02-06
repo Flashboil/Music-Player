@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(music_player main.cpp
         Tracklist.cpp
-        Tracklist.h)
+        Tracklist.h
+        Scan.cpp
+        Scan.h)

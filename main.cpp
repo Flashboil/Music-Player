@@ -1,13 +1,13 @@
 #include <iostream>
 #include <filesystem>
-#include "Tracklist.h"
+#include "Scan.h"
 
 namespace fs = std::filesystem;
 using namespace std;
 
 int main()
 {
-    Tracklist tr;
+    Scan tr;
     tr.getTracks();
 
     return 0;
