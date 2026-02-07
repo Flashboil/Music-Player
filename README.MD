@@ -19,11 +19,8 @@ Filesystem library is used to work with directories and files.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
 - [cpppreference.com](https://en.cppreference.com/w/cpp/filesystem.html)
   - Documentation for filesystem library
-- [Web Site Name](http://url.link.goes.here)
 - [Free Music Archive](https://freemusicarchive.org/home)
   - Creative Commons Music used to test the functionality of the file scan.
 
@@ -36,7 +33,9 @@ Filesystem library is used to work with directories and files.
 # AI Disclosure
 
 I used ChatGPT as a learning tool throughout this project's development. I used it particularly to help understand the 
-documentation for filesystem and how to use certain functions of the library. I also used it to help understand debugging messages.
+documentation for filesystem and how to use certain functions of the library. I also used it to help understand 
+debugging messages. I tried for a very long time to use it to troubleshoot downloading a library, but in the end it 
+proved unhelpful.
 
 # Future Work
 
