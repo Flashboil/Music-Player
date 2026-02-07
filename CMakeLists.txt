@@ -9,4 +9,6 @@ add_executable(music_player
         Scan.cpp
         Scan.h
         Track.cpp
-        Track.h)
+        Track.h
+        Player.cpp
+        Player.h)

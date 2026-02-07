@@ -6,12 +6,14 @@
 #define MUSIC_PLAYER_SCAN_H
 #include <filesystem>
 #include <list>
+#include <vector>
+
 #include "Track.h"
 
 
 class Scan {
     public:
-        std::list<Track> getTracks(const std::filesystem::path& musicFolder);
+        std::vector<Track> getTracks(const std::filesystem::path& musicFolder);
 };
 
 

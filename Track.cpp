@@ -19,3 +19,7 @@ Track::Track(std::filesystem::path path, std::string t, std::string art, std::st
 std::filesystem::path Track::getPath() {
     return filePath;
 }
+
+std::string Track::getPathString() {
+    return filePath.string();
+}

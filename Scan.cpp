@@ -4,13 +4,12 @@
 
 #include "Scan.h"
 #include <filesystem>
-#include <list>
 #include "Track.h"
 
 namespace fs = std::filesystem;
 using namespace std;
 
- std::list<Track> Scan::getTracks(const fs::path& musicFolder) {
+ std::vector<Track> Scan::getTracks(const fs::path& musicFolder) {
     // Check first if the path passed exists and is a directory, return an error.
     if (fs::exists(musicFolder) && fs::is_directory(musicFolder)) {
         // Return a list of paths for each file found.

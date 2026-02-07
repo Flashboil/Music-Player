@@ -17,6 +17,7 @@ private:
 public:
     Track(std::filesystem::path path, std::string t, std::string art, std::string, std::string alb, std::string dur);
     std::filesystem::path getPath();
+    std::string getPathString();
 };
 
 #endif //MUSIC_PLAYER_TRACK_H
