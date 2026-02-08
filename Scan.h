@@ -13,7 +13,7 @@
 
 class Scan {
     public:
-        std::vector<Track> getTracks(const std::filesystem::path& musicFolder);
+        static std::vector<Track> getTracks(const std::filesystem::path& musicFolder);
 };
 
 

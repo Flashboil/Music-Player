@@ -8,7 +8,17 @@
 namespace fs = std::filesystem;
 using namespace std;
 
-Track::Track(std::filesystem::path path, std::string t, std::string art, std::string, std::string alb, std::string dur) {
+//minimal constructor
+Track::Track(const std::filesystem::path& path)
+    : filePath(path)
+{
+    title = path.stem().string();   // filename without extension
+    artist = "Unknown Artist";
+    album = "Unknown Album";
+    duration = "Unknown";
+}
+
+Track::Track(std::filesystem::path path, std::string t, std::string art, std::string alb, std::string dur) {
     filePath = path;
     title = t;
     artist = art;
@@ -16,10 +26,28 @@ Track::Track(std::filesystem::path path, std::string t, std::string art, std::st
     duration = dur;
 }
 
-std::filesystem::path Track::getPath() {
+std::filesystem::path Track::getPath() const {
     return filePath;
 }
 
-std::string Track::getPathString() {
+std::string Track::getPathString() const {
     return filePath.string();
 }
+
+std::string Track::getTitle() const {
+    return title;
+}
+
+std::string Track::getArtist() const {
+    return artist;
+}
+
+std::string Track::getAlbum() const {
+    return album;
+}
+
+std::string Track::getDuration() const {
+    return duration;
+}
+
+

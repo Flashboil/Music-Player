@@ -1,14 +1,13 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a prototype of a command line music player. I made it to practice as I learn C++ syntax. In its current state, 
+it can scan a specified music folder for mp3 files and store them. With the future addition of a library like TagLib it 
+will also be able to extract metadata like artist and album, but right now it just uses placeholders.
 
-{Provide a description of the software that you wrote to demonstrate the C++ language.}
+To use the program, you input 1, 2, 3, or 4 to use the different commands like play and skip. The program will display 
+the "current song" and return to the command menu.
 
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/0pDf8zBKAc8)
 
 # Development Environment
 
@@ -43,3 +42,4 @@ proved unhelpful.
 
 - Music player functionality. Currently, the program only scans for mp3s and 
   extracts relevant metadata without actually playing the tracks found.
+- Full implementation of TagLib library to get metadata for mp3s for better display.

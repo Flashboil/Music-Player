@@ -12,9 +12,9 @@
 namespace fs = std::filesystem;
 using namespace std;
 
-Player::Player(vector<Track> list, int index) {
+Player::Player(const vector<Track> list) {
     playList = list;
-    trackIndex = index;
+    trackIndex = 0;
 }
 
 void Player::doCommand() {
@@ -35,20 +35,24 @@ void Player::doCommand() {
         playTrack(trackIndex);
     }
     else if (command == "4") {
-
+        listSongs();
     }
     else {
         cout << "Invalid command." << endl;
     }
 }
 
-void Player::displayCurrentTrack() {
-    cout << playList[trackIndex].getPathString() << endl;
+void Player::displayCurrentTrack() const {
+    cout << playList[trackIndex].getTitle() << endl;
 }
 
-void Player::playTrack(int index) {
+void Player::playTrack(int index) const {
     cout << "Now playing: ";
-    cout << playList[index].getPathString() << endl;
+    std::cout
+        << std::left  << std::setw(30) << playList[trackIndex].getTitle()
+        << std::left  << std::setw(25) << playList[trackIndex].getAlbum()
+        << std::right << std::setw(8)  << playList[trackIndex].getDuration()
+        << endl;
 }
 
 void Player::advanceIndex() {
@@ -65,7 +69,7 @@ void Player::advanceIndex() {
 void Player::reduceIndex() {
     int index = trackIndex;
     index -= 1;
-    if (index >= 0) {
+    if (index <= 0) {
         trackIndex = 0;
     }
     else {
@@ -73,11 +77,16 @@ void Player::reduceIndex() {
     }
 }
 
-void Player::listSongs() {
+void Player::listSongs() const{
     int counter = 1;
     cout << "Playlist:" << endl;
     for (auto& song : playList) {
-        cout << std::format("{}) {}", counter, song.getPathString()) << endl;
+        cout
+        << std::left  << std::setw(30) << song.getTitle()
+        << std::left  << std::setw(25) << song.getAlbum()
+        << std::right << std::setw(8)  << song.getDuration()
+        << endl;
+        cout << "  " << song.getArtist() << endl;
         counter += 1;
     }
 }

@@ -1,8 +1,7 @@
 #include <filesystem>
 #include "Scan.h"
 #include "Track.h"
-#include <list>
-#include <iostream>
+#include "Player.h"
 
 namespace fs = std::filesystem;
 using namespace std;
@@ -11,11 +10,11 @@ int main()
 {
     fs::path musicFolder = R"(C:\dev\Music-Player\music)";
 
-    Scan scan;
-    std::list<Track> tracks = scan.getTracks(musicFolder);
+    vector<Track> tracks = Scan::getTracks(musicFolder);
+    Player player(tracks);
 
-    for (auto track : tracks) {
-        cout << track.getPath() << endl;
+    while (true) {
+        player.doCommand();
     }
 
     return 0;

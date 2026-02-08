@@ -8,14 +8,14 @@
 
 class Player {
 public:
-    Player(std::vector<Track> list, int index);
+    Player(std::vector<Track> list);
 
-    void displayCurrentTrack();
+    void displayCurrentTrack() const;
     void doCommand();
-    void playTrack(int index);
+    void playTrack(int index) const;
     void advanceIndex();
     void reduceIndex();
-    void listSongs();
+    void listSongs() const;
 
 private:
     std::vector<Track> playList;

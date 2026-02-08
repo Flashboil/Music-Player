@@ -13,10 +13,10 @@ using namespace std;
     // Check first if the path passed exists and is a directory, return an error.
     if (fs::exists(musicFolder) && fs::is_directory(musicFolder)) {
         // Return a list of paths for each file found.
-        std::list<Track> files;
+        std::vector<Track> files;
         for (const auto& entry : fs::directory_iterator(musicFolder)) {
             if (entry.is_regular_file() && entry.path().extension() == ".mp3") {
-                files.push_back(Track(entry.path()));
+                files.emplace_back(entry.path()); // push one parameter that will be made into a track
             }
         }
         return files;
